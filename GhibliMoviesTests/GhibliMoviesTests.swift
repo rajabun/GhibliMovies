@@ -10,24 +10,34 @@ import XCTest
 
 class GhibliMoviesTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var viewController: HomeViewController?
+    var viewModel: ApiViewModel?
+    
+    override func setUp() {
+        super.setUp()
+        let sampleStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let homeView  = sampleStoryBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        
+        viewController = homeView
+        XCTAssertNotNil(viewController?.view, "Home View not found")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        viewController = nil
+        super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testGoToHomeVC() {
+        guard viewController != nil else {
+            XCTAssertTrue(false, "Home View Controller not found")
+            return
         }
     }
-
+    
+    func testHomeBindData() {
+        viewController?.fetchData()
+        viewController?.setupTableView()
+        viewController?.alertErrorSetup()
+        viewController?.reloadInputViews()
+    }
 }

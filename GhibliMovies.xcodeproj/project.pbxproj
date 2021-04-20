@@ -15,6 +15,11 @@
 		4EB5206D262DE04B00E81B36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB5206B262DE04B00E81B36 /* LaunchScreen.storyboard */; };
 		4EB52078262DE04C00E81B36 /* GhibliMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB52077262DE04C00E81B36 /* GhibliMoviesTests.swift */; };
 		4EB52083262DE04C00E81B36 /* GhibliMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB52082262DE04C00E81B36 /* GhibliMoviesUITests.swift */; };
+		4EB52098262DE21100E81B36 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB52097262DE21100E81B36 /* ApiModel.swift */; };
+		4EB5209D262DE22700E81B36 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5209C262DE22700E81B36 /* HomeViewController.swift */; };
+		4EB520A2262DE23C00E81B36 /* ApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB520A1262DE23C00E81B36 /* ApiViewModel.swift */; };
+		4EB520A7262DE24700E81B36 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB520A6262DE24700E81B36 /* ApiRequest.swift */; };
+		4EB520AC262E4BCC00E81B36 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB520AB262E4BCC00E81B36 /* HomeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		4EB5207E262DE04C00E81B36 /* GhibliMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhibliMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB52082262DE04C00E81B36 /* GhibliMoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliMoviesUITests.swift; sourceTree = "<group>"; };
 		4EB52084262DE04C00E81B36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EB52097262DE21100E81B36 /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
+		4EB5209C262DE22700E81B36 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4EB520A1262DE23C00E81B36 /* ApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewModel.swift; sourceTree = "<group>"; };
+		4EB520A6262DE24700E81B36 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		4EB520AB262E4BCC00E81B36 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,10 @@
 		4EB5205F262DE04900E81B36 /* GhibliMovies */ = {
 			isa = PBXGroup;
 			children = (
+				4EB52093262DE1CC00E81B36 /* Model */,
+				4EB52095262DE1E500E81B36 /* View */,
+				4EB52096262DE1F100E81B36 /* ViewModel */,
+				4EB52094262DE1D300E81B36 /* Networking */,
 				4EB52060262DE04900E81B36 /* AppDelegate.swift */,
 				4EB52062262DE04900E81B36 /* SceneDelegate.swift */,
 				4EB52064262DE04900E81B36 /* ViewController.swift */,
@@ -126,6 +140,39 @@
 				4EB52084262DE04C00E81B36 /* Info.plist */,
 			);
 			path = GhibliMoviesUITests;
+			sourceTree = "<group>";
+		};
+		4EB52093262DE1CC00E81B36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EB52097262DE21100E81B36 /* ApiModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EB52094262DE1D300E81B36 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4EB520A6262DE24700E81B36 /* ApiRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4EB52095262DE1E500E81B36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EB5209C262DE22700E81B36 /* HomeViewController.swift */,
+				4EB520AB262E4BCC00E81B36 /* HomeCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EB52096262DE1F100E81B36 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4EB520A1262DE23C00E81B36 /* ApiViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +305,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB5209D262DE22700E81B36 /* HomeViewController.swift in Sources */,
+				4EB520A2262DE23C00E81B36 /* ApiViewModel.swift in Sources */,
+				4EB520AC262E4BCC00E81B36 /* HomeCell.swift in Sources */,
+				4EB52098262DE21100E81B36 /* ApiModel.swift in Sources */,
 				4EB52065262DE04900E81B36 /* ViewController.swift in Sources */,
 				4EB52061262DE04900E81B36 /* AppDelegate.swift in Sources */,
+				4EB520A7262DE24700E81B36 /* ApiRequest.swift in Sources */,
 				4EB52063262DE04900E81B36 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85YSJX97S8;
 				INFOPLIST_FILE = GhibliMovies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +499,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MuhammadRajab.GhibliMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85YSJX97S8;
 				INFOPLIST_FILE = GhibliMovies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +519,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MuhammadRajab.GhibliMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
